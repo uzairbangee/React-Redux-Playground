@@ -1,7 +1,8 @@
 import React from 'react';
-import {connect} from "react-redux";
+import {useSelector} from "react-redux";
 
-function Display({text}) {
+function Display() {
+    const text = useSelector(state => state.text);
     return (
         <div>
             TEXT : {text}
@@ -9,10 +10,11 @@ function Display({text}) {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        text: state.text
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         text: state.text
+//     }
+// }
 
-export default connect(mapStateToProps)(Display);
+// export default connect(mapStateToProps)(Display);
+export default Display;

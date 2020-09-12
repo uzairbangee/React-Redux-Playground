@@ -1,11 +1,15 @@
 import React from 'react'
 import {change_text} from "./../Store/Actions/Action";
-import {connect} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+// import {connect} from "react-redux";
 
-function TextArea({text, change_new_text}) {
-    
+function TextArea() {
+
+    const text = useSelector(state => state.text);
+    const dispatch = useDispatch();
+
     const handleChange = ({target}) => {
-        change_new_text(target.value)
+        dispatch(change_text(target.value))
     }
 
     return (
@@ -15,16 +19,17 @@ function TextArea({text, change_new_text}) {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        text: state.text
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         text: state.text
+//     }
+// }
 
-const mapDispatchToProps = dispatch => {
-    return{
-        change_new_text : (text) => dispatch(change_text(text))
-    }
-}
+// const mapDispatchToProps = dispatch => {
+//     return{
+//         change_new_text : (text) => dispatch(change_text(text))
+//     }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TextArea);
+// export default connect(mapStateToProps, mapDispatchToProps)(TextArea);
+export default TextArea;

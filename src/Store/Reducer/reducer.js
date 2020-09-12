@@ -5,7 +5,6 @@ export const initialState = {
 }
 
 export const reducer = (state=initialState, action) => {
-    console.log(action)
     switch(action.type){
         case CHANGE_TEXT:
             return {
