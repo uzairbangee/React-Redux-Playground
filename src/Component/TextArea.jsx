@@ -1,7 +1,6 @@
 import React from 'react'
 import {change_text} from "./../Store/Actions/Action";
 import { useDispatch, useSelector } from "react-redux";
-// import {connect} from "react-redux";
 
 function TextArea() {
 
@@ -19,17 +18,4 @@ function TextArea() {
     )
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         text: state.text
-//     }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//     return{
-//         change_new_text : (text) => dispatch(change_text(text))
-//     }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(TextArea);
 export default TextArea;

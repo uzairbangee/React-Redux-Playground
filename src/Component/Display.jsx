@@ -9,12 +9,4 @@ function Display() {
         </div>
     )
 }
-
-// const mapStateToProps = state => {
-//     return {
-//         text: state.text
-//     }
-// }
-
-// export default connect(mapStateToProps)(Display);
 export default Display;
